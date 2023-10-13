@@ -80,6 +80,14 @@ local plugins = {
 		"olimorris/onedarkpro.nvim",
 		priority = 1000, -- Ensure it loads first
 		config = function()
+			require("onedarkpro").setup({
+				styles = {
+					keywords = "italic",
+					conditionals = "italic",
+					comments = "italic",
+					types = "italic",
+				}
+			})
 			vim.cmd.colorscheme 'onedark'
 		end,
 	},
@@ -90,7 +98,7 @@ local plugins = {
 		-- See `:help lualine.txt`
 		opts = {
 			options = {
-				theme = 'onedark',
+				theme = 'catppuccin',
 				-- component_separators = '|',
 				component_separators = { left = '', right = ''},
 				section_separators = { left = '', right = ''},
