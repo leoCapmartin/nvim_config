@@ -98,7 +98,7 @@ local plugins = {
 		-- See `:help lualine.txt`
 		opts = {
 			options = {
-				theme = 'catppuccin',
+				theme = 'onedark',
 				-- component_separators = '|',
 				component_separators = { left = '', right = ''},
 				section_separators = { left = '', right = ''},
