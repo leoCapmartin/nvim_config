@@ -203,6 +203,17 @@ local plugins = {
 		config = function ()
 			require("colorizer").setup()
 		end
+	},
+
+	{
+		'lewis6991/hover.nvim',
+		opts = function ()
+			return require("custom.plugins.hover")
+		end,
+		config = function (_, opts)
+			require("hover").setup(opts)
+			require("custom.config.keymaps").hover()
+		end
 	}
 
 }

@@ -43,5 +43,10 @@ return {
 	nvimtree = function ()
 		vim.keymap.set('n', '<C-n>', '<CMD> NvimTreeToggle <CR>')
 		vim.keymap.set('n', '<C-f>', '<CMD> NvimTreeFocus <CR>')
+	end,
+
+	hover = function ()
+		vim.keymap.set('n', 'K', require("hover").hover, { desc = "hover.nvim"})
+		vim.keymap.set('n', '<C-k>', require("hover").hover_select, { desc = "hover.nvim (select)"})
 	end
 }
