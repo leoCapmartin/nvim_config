@@ -59,11 +59,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require "custom.plugins"
+local plugins = require 'custom.plugins'
 
-require("lazy").setup(plugins, {})
+require('lazy').setup(plugins, {})
 
-require('custom.config.vimrc')
+require 'custom.config.vimrc'
 
 require('custom.config.keymaps').global()
 
@@ -160,7 +160,7 @@ mason_lspconfig.setup_handlers {
       settings = servers[server_name],
       filetypes = (servers[server_name] or {}).filetypes,
     }
-  end
+  end,
 }
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

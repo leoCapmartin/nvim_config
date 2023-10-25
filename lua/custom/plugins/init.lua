@@ -33,6 +33,17 @@ local plugins = {
 	},
 
 	{
+		-- formating
+		'mhartington/formatter.nvim',
+		opts = function ()
+			return require("custom.plugins.formatter")
+		end,
+		config = function (_, opts)
+			require("formatter").setup(opts)
+		end
+	},
+
+	{
 		-- Autocompletion
 		'hrsh7th/nvim-cmp',
 		dependencies = {
