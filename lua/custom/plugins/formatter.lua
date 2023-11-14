@@ -35,6 +35,9 @@ return {
     javascript = {
       require('formatter.filetypes.javascript').prettier,
     },
+    json = {
+      require('formatter.filetypes.json').prettier,
+    },
     css = {
       require('formatter.filetypes.css').prettier,
     },

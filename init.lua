@@ -128,6 +128,7 @@ local servers = {
   eslint = {},
   html = { filetypes = { 'html', 'twig', 'hbs', 'vue' } },
   cssls = {},
+  emmet_ls = {},
   volar = {},
 
   lua_ls = {
