@@ -47,6 +47,9 @@ return {
     c = {
       require('formatter.filetypes.c').clangformat,
     },
+    yaml = {
+      require('formatter.filetypes.yaml').prettier
+    },
     ['*'] = {
       require('formatter.filetypes.any').remove_trailing_whitespace,
     },

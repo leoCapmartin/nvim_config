@@ -130,6 +130,7 @@ local servers = {
   cssls = {},
   emmet_ls = {},
   volar = {},
+  yamlls = {},
 
   lua_ls = {
     Lua = {
