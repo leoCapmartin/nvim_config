@@ -30,14 +30,7 @@ return {
     pcall(require('telescope').load_extension, 'fzf')
     vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
     vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<leader>s', function()
-      -- You can pass additional configuration to telescope to change theme, layout, etc.
-      require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-      })
-    end, { desc = 'Fuzzily [s]earch in current buffer' })
-
+    vim.keymap.set('n', '<leader>s', require('telescope.builtin').current_buffer_fuzzy_find, { desc = 'Fuzzily [s]earch in current buffer' })
     vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
     vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = '[G]it [S]tatus' })
     vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[F]ind [F]iles' })
