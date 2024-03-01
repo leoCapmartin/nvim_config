@@ -131,6 +131,7 @@ local servers = {
   emmet_ls = {},
   volar = {},
   yamlls = {},
+  omnisharp = {},
 
   lua_ls = {
     Lua = {

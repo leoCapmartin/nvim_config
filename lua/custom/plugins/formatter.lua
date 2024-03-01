@@ -50,8 +50,11 @@ return {
     c = {
       require('formatter.filetypes.c').clangformat,
     },
+    cs = {
+      require('formatter.filetypes.cs').dotnetformat,
+    },
     yaml = {
-      require('formatter.filetypes.yaml').prettier
+      require('formatter.filetypes.yaml').prettier,
     },
     ['*'] = {
       require('formatter.filetypes.any').remove_trailing_whitespace,
