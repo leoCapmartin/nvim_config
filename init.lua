@@ -132,6 +132,7 @@ local servers = {
   volar = {},
   yamlls = {},
   omnisharp = {},
+  lemminx = {},
 
   lua_ls = {
     Lua = {
