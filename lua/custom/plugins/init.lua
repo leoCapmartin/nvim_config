@@ -236,6 +236,19 @@ local plugins = {
       require('custom.config.keymaps').todo_comments()
     end,
   },
+
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    opts = function()
+      return require 'custom.plugins.copilot'
+    end,
+    config = function(_, opts)
+      require('copilot').setup(opts)
+      require('custom.config.keymaps').copilot()
+    end,
+  },
 }
 
 return plugins

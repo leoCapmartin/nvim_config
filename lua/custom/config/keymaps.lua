@@ -53,4 +53,7 @@ return {
   todo_comments = function()
     vim.keymap.set('n', '<leader>ft', '<CMD> TodoTelescope <CR>', { desc = '[F]ind [T]odos' })
   end,
+  copilot = function()
+    vim.keymap.set('n', '<leader>cp', require('copilot.panel').open, { desc = 'Co[p]ilot [P]anel' })
+  end,
 }

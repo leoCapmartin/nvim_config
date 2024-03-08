@@ -5,8 +5,8 @@ luasnip.config.setup {}
 
 local is_whitespace = function()
   -- returns true if the character under the cursor is whitespace.
-  local col = vim.fn.col('.') - 1
-  local line = vim.fn.getline('.')
+  local col = vim.fn.col '.' - 1
+  local line = vim.fn.getline '.'
   local char_under_cursor = string.sub(line, col, col)
 
   if col == 0 or string.match(char_under_cursor, '%s') then
@@ -18,14 +18,14 @@ end
 
 local is_comment = function()
   -- uses treesitter to determine if cursor is currently in a comment.
-  local context = require("cmp.config.context")
-  return context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment")
+  local context = require 'cmp.config.context'
+  return context.in_treesitter_capture 'comment' == true or context.in_syntax_group 'Comment'
 end
 
 return {
   enabled = function()
     return (not is_whitespace()) and (not is_comment())
-  end ,
+  end,
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
