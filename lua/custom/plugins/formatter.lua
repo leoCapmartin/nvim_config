@@ -35,7 +35,7 @@ return {
     javascript = {
       require('formatter.filetypes.javascript').prettier,
     },
-    typecript = {
+    typescript = {
       require('formatter.filetypes.typescript').prettier,
     },
     json = {

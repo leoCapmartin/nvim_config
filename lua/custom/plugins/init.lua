@@ -249,6 +249,22 @@ local plugins = {
       require('custom.config.keymaps').copilot()
     end,
   },
+
+  {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    branch = 'canary',
+    dependencies = {
+      { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
+      { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
+    },
+    opts = function()
+      return require 'custom.plugins.copilot-chat'
+    end,
+    config = function(_, opts)
+      require('CopilotChat').setup(opts)
+      require('custom.config.keymaps').copilotChat()
+    end,
+  },
 }
 
 return plugins
