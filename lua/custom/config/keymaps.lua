@@ -56,4 +56,12 @@ return {
   copilot = function()
     vim.keymap.set('n', '<leader>cp', require('copilot.panel').open, { desc = 'Co[p]ilot [P]anel' })
   end,
+  copilotChat = function()
+    vim.keymap.set({ 'n', 'v' }, '<leader>cc', require('CopilotChat').toggle, { desc = '[C]opilot [C]hat' })
+    vim.keymap.set({ 'n', 'v' }, '<leader>cce', '<CMD> CopilotChatExplain <CR>', { desc = '[C]opilot [C]hat [E]xplain' })
+    vim.keymap.set({ 'n', 'v' }, '<leader>ccf', '<CMD> CopilotChatFix <CR>', { desc = '[C]opilot [C]hat [F]ix' })
+    vim.keymap.set({ 'n', 'v' }, '<leader>cco', '<CMD> CopilotChatOptimize <CR>', { desc = '[C]opilot [C]hat [O]ptimize' })
+    vim.keymap.set({ 'n', 'v' }, '<leader>ccd', '<CMD> CopilotChatDocs <CR>', { desc = '[C]opilot [C]hat [D]ocs' })
+    vim.keymap.set({ 'n', 'v' }, '<leader>cct', '<CMD> CopilotChatTests <CR>', { desc = '[C]opilot [C]hat [T]ests' })
+  end,
 }
