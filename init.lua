@@ -129,9 +129,9 @@ local servers = {
   html = { filetypes = { 'html', 'twig', 'hbs', 'vue' } },
   cssls = {},
   emmet_ls = {},
-  volar = {},
+  -- volar = {},
   yamlls = {},
-  omnisharp = {},
+  -- omnisharp = {},
   lemminx = {},
 
   lua_ls = {
